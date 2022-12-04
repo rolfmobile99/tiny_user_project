@@ -39,6 +39,7 @@ module tiny_user_project (user_clock2,
  output [31:0] wbs_dat_o;
  input [3:0] wbs_sel_i;
 
+ wire _000_;
  wire net100;
  wire net110;
  wire net111;
@@ -77,8 +78,7 @@ module tiny_user_project (user_clock2,
  wire net107;
  wire net108;
  wire net109;
- wire net62;
- wire net72;
+ wire net63;
  wire net73;
  wire net74;
  wire net75;
@@ -88,8 +88,8 @@ module tiny_user_project (user_clock2,
  wire net79;
  wire net80;
  wire net81;
- wire net63;
  wire net82;
+ wire net64;
  wire net83;
  wire net84;
  wire net85;
@@ -99,7 +99,7 @@ module tiny_user_project (user_clock2,
  wire net89;
  wire net90;
  wire net91;
- wire net64;
+ wire net65;
  wire net92;
  wire net93;
  wire net94;
@@ -108,15 +108,14 @@ module tiny_user_project (user_clock2,
  wire net97;
  wire net98;
  wire net99;
- wire net65;
  wire net66;
  wire net67;
  wire net68;
  wire net69;
  wire net70;
  wire net71;
+ wire net72;
  wire net174;
- wire net8;
  wire net9;
  wire net10;
  wire net11;
@@ -126,8 +125,8 @@ module tiny_user_project (user_clock2,
  wire net15;
  wire net16;
  wire net17;
- wire net175;
  wire net18;
+ wire net175;
  wire net19;
  wire net20;
  wire net21;
@@ -137,8 +136,8 @@ module tiny_user_project (user_clock2,
  wire net25;
  wire net26;
  wire net27;
- wire net176;
  wire net28;
+ wire net176;
  wire net29;
  wire net30;
  wire net31;
@@ -149,6 +148,7 @@ module tiny_user_project (user_clock2,
  wire net36;
  wire net37;
  wire net38;
+ wire net177;
  wire net39;
  wire net40;
  wire net41;
@@ -158,8 +158,8 @@ module tiny_user_project (user_clock2,
  wire net45;
  wire net46;
  wire net47;
- wire net2;
  wire net48;
+ wire net178;
  wire net49;
  wire net50;
  wire net51;
@@ -169,15 +169,15 @@ module tiny_user_project (user_clock2,
  wire net55;
  wire net56;
  wire net57;
- wire net3;
  wire net58;
  wire net59;
  wire net60;
  wire net61;
- wire net4;
+ wire net62;
  wire net5;
  wire net6;
  wire net7;
+ wire net8;
  wire net138;
  wire net139;
  wire net140;
@@ -215,14 +215,17 @@ module tiny_user_project (user_clock2,
  wire net150;
  wire net151;
  wire net1;
+ wire net2;
+ wire net3;
+ wire net4;
 
- gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_2 (.ZN(net2),
+ gf180mcu_fd_sc_mcu7t5v0__xnor2_1 _001_ (.A1(net1),
+    .A2(net2),
+    .ZN(_000_),
     .VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_3 (.ZN(net3),
-    .VDD(vdd),
-    .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_4 (.ZN(net4),
+ gf180mcu_fd_sc_mcu7t5v0__clkbuf_1 _002_ (.I(_000_),
+    .Z(net3),
     .VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_5 (.ZN(net5),
@@ -741,7 +744,14 @@ module tiny_user_project (user_clock2,
  gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_176 (.ZN(net176),
     .VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_0_2 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_177 (.ZN(net177),
+    .VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_178 (.ZN(net178),
+    .VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__antenna ANTENNA_input1_I (.I(io_in[12]),
+    .VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__endcap PHY_0 (.VDD(vdd),
     .VSS(vss));
@@ -6245,8 +6255,28 @@ module tiny_user_project (user_clock2,
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__filltie TAP_2750 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_1 (.ZN(net1),
+ gf180mcu_fd_sc_mcu7t5v0__dlyb_1 input1 (.I(io_in[12]),
+    .Z(net1),
     .VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__dlyb_1 input2 (.I(io_in[13]),
+    .Z(net2),
+    .VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__clkbuf_3 output3 (.I(net3),
+    .Z(io_out[23]),
+    .VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__tiel tiny_user_project_4 (.ZN(net4),
+    .VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__antenna ANTENNA_input2_I (.I(io_in[13]),
+    .VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__antenna ANTENNA__001__A1 (.I(net1),
+    .VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_0_2 (.VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_0_6 (.VDD(vdd),
     .VSS(vss));
@@ -11700,7 +11730,13 @@ module tiny_user_project (user_clock2,
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_57_2 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_57_7 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_32 FILLER_57_17 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_57_49 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_57_65 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_57_69 (.VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_57_73 (.VDD(vdd),
     .VSS(vss));
@@ -12062,11 +12098,17 @@ module tiny_user_project (user_clock2,
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_60_1043 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_61_2 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_61_2 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_61_66 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_61_6 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_61_70 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_61_8 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_32 FILLER_61_15 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_61_47 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_61_63 (.VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_61_73 (.VDD(vdd),
     .VSS(vss));
@@ -12152,7 +12194,15 @@ module tiny_user_project (user_clock2,
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_61_1044 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_32 FILLER_62_2 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_62_2 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_62_4 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_62_18 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_62_22 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_62_30 (.VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_62_34 (.VDD(vdd),
     .VSS(vss));
@@ -12246,11 +12296,13 @@ module tiny_user_project (user_clock2,
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_62_1043 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_63_2 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_63_2 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_63_66 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_32 FILLER_63_19 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_63_70 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_63_51 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_63_67 (.VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_63_73 (.VDD(vdd),
     .VSS(vss));
@@ -12338,9 +12390,15 @@ module tiny_user_project (user_clock2,
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_63_1044 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_32 FILLER_64_2 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_64_2 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_64_34 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_64_5 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_64_21 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_64_29 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_64_33 (.VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_64_37 (.VDD(vdd),
     .VSS(vss));
@@ -15116,9 +15174,15 @@ module tiny_user_project (user_clock2,
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_93_1044 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_32 FILLER_94_2 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_94_2 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_94_34 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_94_5 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_94_21 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_94_29 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_94_33 (.VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_94_37 (.VDD(vdd),
     .VSS(vss));
@@ -15210,11 +15274,13 @@ module tiny_user_project (user_clock2,
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_94_1044 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_95_2 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_95_2 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_95_66 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_32 FILLER_95_19 (.VDD(vdd),
     .VSS(vss));
- gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_95_70 (.VDD(vdd),
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_95_51 (.VDD(vdd),
+    .VSS(vss));
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_95_67 (.VDD(vdd),
     .VSS(vss));
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_95_73 (.VDD(vdd),
     .VSS(vss));
@@ -21924,29 +21990,28 @@ module tiny_user_project (user_clock2,
  assign io_oeb[7] = net106;
  assign io_oeb[8] = net107;
  assign io_oeb[9] = net108;
- assign io_out[0] = net61;
- assign io_out[10] = net71;
- assign io_out[11] = net72;
- assign io_out[12] = net73;
- assign io_out[13] = net74;
- assign io_out[14] = net75;
- assign io_out[15] = net76;
- assign io_out[16] = net77;
- assign io_out[17] = net78;
- assign io_out[18] = net79;
- assign io_out[19] = net80;
- assign io_out[1] = net62;
- assign io_out[20] = net81;
- assign io_out[21] = net82;
- assign io_out[22] = net83;
- assign io_out[23] = net84;
+ assign io_out[0] = net62;
+ assign io_out[10] = net72;
+ assign io_out[11] = net73;
+ assign io_out[12] = net74;
+ assign io_out[13] = net75;
+ assign io_out[14] = net76;
+ assign io_out[15] = net77;
+ assign io_out[16] = net78;
+ assign io_out[17] = net79;
+ assign io_out[18] = net80;
+ assign io_out[19] = net81;
+ assign io_out[1] = net63;
+ assign io_out[20] = net82;
+ assign io_out[21] = net83;
+ assign io_out[22] = net84;
  assign io_out[24] = net85;
  assign io_out[25] = net86;
  assign io_out[26] = net87;
  assign io_out[27] = net88;
  assign io_out[28] = net89;
  assign io_out[29] = net90;
- assign io_out[2] = net63;
+ assign io_out[2] = net64;
  assign io_out[30] = net91;
  assign io_out[31] = net92;
  assign io_out[32] = net93;
@@ -21955,77 +22020,77 @@ module tiny_user_project (user_clock2,
  assign io_out[35] = net96;
  assign io_out[36] = net97;
  assign io_out[37] = net98;
- assign io_out[3] = net64;
- assign io_out[4] = net65;
- assign io_out[5] = net66;
- assign io_out[6] = net67;
- assign io_out[7] = net68;
- assign io_out[8] = net69;
- assign io_out[9] = net70;
+ assign io_out[3] = net65;
+ assign io_out[4] = net66;
+ assign io_out[5] = net67;
+ assign io_out[6] = net68;
+ assign io_out[7] = net69;
+ assign io_out[8] = net70;
+ assign io_out[9] = net71;
  assign la_data_out[0] = net173;
- assign la_data_out[10] = net7;
- assign la_data_out[11] = net8;
- assign la_data_out[12] = net9;
- assign la_data_out[13] = net10;
- assign la_data_out[14] = net11;
- assign la_data_out[15] = net12;
- assign la_data_out[16] = net13;
- assign la_data_out[17] = net14;
- assign la_data_out[18] = net15;
- assign la_data_out[19] = net16;
+ assign la_data_out[10] = net8;
+ assign la_data_out[11] = net9;
+ assign la_data_out[12] = net10;
+ assign la_data_out[13] = net11;
+ assign la_data_out[14] = net12;
+ assign la_data_out[15] = net13;
+ assign la_data_out[16] = net14;
+ assign la_data_out[17] = net15;
+ assign la_data_out[18] = net16;
+ assign la_data_out[19] = net17;
  assign la_data_out[1] = net174;
- assign la_data_out[20] = net17;
- assign la_data_out[21] = net18;
- assign la_data_out[22] = net19;
- assign la_data_out[23] = net20;
- assign la_data_out[24] = net21;
- assign la_data_out[25] = net22;
- assign la_data_out[26] = net23;
- assign la_data_out[27] = net24;
- assign la_data_out[28] = net25;
- assign la_data_out[29] = net26;
+ assign la_data_out[20] = net18;
+ assign la_data_out[21] = net19;
+ assign la_data_out[22] = net20;
+ assign la_data_out[23] = net21;
+ assign la_data_out[24] = net22;
+ assign la_data_out[25] = net23;
+ assign la_data_out[26] = net24;
+ assign la_data_out[27] = net25;
+ assign la_data_out[28] = net26;
+ assign la_data_out[29] = net27;
  assign la_data_out[2] = net175;
- assign la_data_out[30] = net27;
- assign la_data_out[31] = net28;
- assign la_data_out[32] = net29;
- assign la_data_out[33] = net30;
- assign la_data_out[34] = net31;
- assign la_data_out[35] = net32;
- assign la_data_out[36] = net33;
- assign la_data_out[37] = net34;
- assign la_data_out[38] = net35;
- assign la_data_out[39] = net36;
+ assign la_data_out[30] = net28;
+ assign la_data_out[31] = net29;
+ assign la_data_out[32] = net30;
+ assign la_data_out[33] = net31;
+ assign la_data_out[34] = net32;
+ assign la_data_out[35] = net33;
+ assign la_data_out[36] = net34;
+ assign la_data_out[37] = net35;
+ assign la_data_out[38] = net36;
+ assign la_data_out[39] = net37;
  assign la_data_out[3] = net176;
- assign la_data_out[40] = net37;
- assign la_data_out[41] = net38;
- assign la_data_out[42] = net39;
- assign la_data_out[43] = net40;
- assign la_data_out[44] = net41;
- assign la_data_out[45] = net42;
- assign la_data_out[46] = net43;
- assign la_data_out[47] = net44;
- assign la_data_out[48] = net45;
- assign la_data_out[49] = net46;
- assign la_data_out[4] = net1;
- assign la_data_out[50] = net47;
- assign la_data_out[51] = net48;
- assign la_data_out[52] = net49;
- assign la_data_out[53] = net50;
- assign la_data_out[54] = net51;
- assign la_data_out[55] = net52;
- assign la_data_out[56] = net53;
- assign la_data_out[57] = net54;
- assign la_data_out[58] = net55;
- assign la_data_out[59] = net56;
- assign la_data_out[5] = net2;
- assign la_data_out[60] = net57;
- assign la_data_out[61] = net58;
- assign la_data_out[62] = net59;
- assign la_data_out[63] = net60;
- assign la_data_out[6] = net3;
- assign la_data_out[7] = net4;
- assign la_data_out[8] = net5;
- assign la_data_out[9] = net6;
+ assign la_data_out[40] = net38;
+ assign la_data_out[41] = net39;
+ assign la_data_out[42] = net40;
+ assign la_data_out[43] = net41;
+ assign la_data_out[44] = net42;
+ assign la_data_out[45] = net43;
+ assign la_data_out[46] = net44;
+ assign la_data_out[47] = net45;
+ assign la_data_out[48] = net46;
+ assign la_data_out[49] = net47;
+ assign la_data_out[4] = net177;
+ assign la_data_out[50] = net48;
+ assign la_data_out[51] = net49;
+ assign la_data_out[52] = net50;
+ assign la_data_out[53] = net51;
+ assign la_data_out[54] = net52;
+ assign la_data_out[55] = net53;
+ assign la_data_out[56] = net54;
+ assign la_data_out[57] = net55;
+ assign la_data_out[58] = net56;
+ assign la_data_out[59] = net57;
+ assign la_data_out[5] = net178;
+ assign la_data_out[60] = net58;
+ assign la_data_out[61] = net59;
+ assign la_data_out[62] = net60;
+ assign la_data_out[63] = net61;
+ assign la_data_out[6] = net4;
+ assign la_data_out[7] = net5;
+ assign la_data_out[8] = net6;
+ assign la_data_out[9] = net7;
  assign user_irq[0] = net137;
  assign user_irq[1] = net138;
  assign user_irq[2] = net139;
