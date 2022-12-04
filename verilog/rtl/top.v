@@ -19,6 +19,7 @@ module rolfmobile99_top(
   assign io_out[7] = xnor_y;
   //assign io_out[6:0] = ... ; // notused
 
+  wire xnor_y;
 
   // connect modules
 
