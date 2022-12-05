@@ -1,4 +1,11 @@
-# Tiny User Project
+![user_project_ci](../../workflows/user_project_ci.yml/badge.svg)
+
+# Dual Port Register File
+
+This is a Verilog project.
+
+
+## Tiny User Project
 
 Template for submitting [TinyTapeout](https://tinytapeout.com) based projects to the [Open MPW shuttle](https://developers.google.com/silicon) program.
 
