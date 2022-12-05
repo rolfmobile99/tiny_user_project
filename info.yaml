@@ -3,8 +3,9 @@
 project:
   wokwi_id:    0        # If using wokwi, set this to your project's ID
   source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here
+    - verilog/rtl/regfile_top.v
     - verilog/rtl/xnor1.v
-    - verilog/rtl/top.v
+    - verilog/rtl/regfile16x4.v
   top_module:  "rolfmobile99_top"      # put the name of your top module here, make it unique by prepending your github username
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
@@ -16,8 +17,8 @@ project:
 documentation: 
   author:       "Rolf Widenfelt"      # Your name
   discord:      ""      # Your discord handle - make sure to include the # part as well
-  title:        "Collection of GF180 standard cells"      # Project title
-  description:  ""      # Short description of what your project does
+  title:        "16 x 4-bit dual port register file + XNOR"      # Project title
+  description:  "A dual port register file + XNOR test gate"      # Short description of what your project does
   how_it_works: ""      # Longer description of how the project works
   how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   external_hw:  ""      # Describe any external hardware needed
@@ -28,19 +29,30 @@ documentation:
   inputs:               # a description of what the inputs do
     - clock
     - reset
-    - xnor_a
+    - xnor_a        # inputs for XNOR gate
     - xnor_b
-    - none
-    - none
-    - none
-    - none
+    - en1           # inputs for regfile
+    - en2
+    - wrEn
+    - rdAddr1_3
+    - rdAddr1_2
+    - rdAddr1_1
+    - rdAddr1_0
+    - rdAddr2_3
+    - rdAddr2_2
+    - rdAddr2_1
+    - rdAddr2_0
+    - dataIn_3
+    - dataIn_2
+    - dataIn_1
+    - dataIn_0
   outputs:
-    - xnor_y         # output of XNOR gate
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-
+    - xnor_y         # output for XNOR gate
+    - dataBusA_3     # outputs for regfile
+    - dataBusA_2
+    - dataBusA_1
+    - dataBusA_0
+    - dataBusB_3
+    - dataBusB_2
+    - dataBusB_1
+    - dataBusB_0
