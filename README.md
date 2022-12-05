@@ -1,4 +1,4 @@
-![user_project_ci](../../workflows/user_project_ci.yml/badge.svg)
+![user_project_ci](https://github.com/rolfmobile99/tiny_user_project/actions/workflows/user_project_ci.yml/badge.svg)
 
 # Dual Port Register File
 
