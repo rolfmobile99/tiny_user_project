@@ -1,4 +1,28 @@
-# Tiny User Project
+![user_project_ci](https://github.com/rolfmobile99/tiny_user_project/actions/workflows/user_project_ci.yml/badge.svg)
+
+# Dual Port Register File
+
+This implements a set of 16 4-bit registers that can be read and written.
+A special feature allows 2 simultaneous reads.
+It is typical of many CPU architectures to allow two registers to be accessed in a single instruction,
+hence the usefulness of this feature.
+An assembly code example might look like:
+```
+        add R2,R3
+```
+where the operation is:
+```
+        R2 <- R2 + R3
+```
+
+Ideally, the two reads are done at the same time, for performance reasons.
+
+Note: This is a Verilog project.
+
+More documentation on the actual pin assignments is forthcoming...
+
+
+## Tiny User Project
 
 Template for submitting [TinyTapeout](https://tinytapeout.com) based projects to the [Open MPW shuttle](https://developers.google.com/silicon) program.
 
