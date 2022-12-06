@@ -19,7 +19,7 @@ Ideally, the two reads are done at the same time, for performance reasons.
 
 Note: This is a Verilog project.
 
-More documentation on the actual pin assignments is forthcoming.
+More documentation on the actual pin assignments is forthcoming...
 
 
 ## Tiny User Project
